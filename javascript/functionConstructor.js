@@ -12,10 +12,21 @@
 // greeting(sayHello, "JavaScript!");
 // // Hello, JavaScript!
 
-function sayHello() {
-  return (me) => {
-    console.log(me);
-  };
+// function sayHello() {
+//   return (me) => {
+//     console.log(me);
+//   };
+// }
+
+// sayHello()("shamim");
+
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback();
 }
 
-sayHello()("shamim");
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+greet("Ajay", sayBye);
